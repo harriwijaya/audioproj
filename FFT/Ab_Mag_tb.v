@@ -35,9 +35,8 @@ module Ab_Mag_tb;
 	reg m_axis_data_tready;
 	reg Re_tvalid;
 	reg Im_tvalid;
-
 	reg Sq_tready;
-//	reg Add_tready;
+	reg Add_tready;
 	reg [7:0] i;
 
 	// Outputs
@@ -48,12 +47,9 @@ module Ab_Mag_tb;
 	wire m_axis_data_tlast;
 	wire Re_tready;
 	wire Im_tready;
-	wire Sq_tvalid;
-	wire [31:0] Re_Sq_tdata;
-	wire [31:0] Im_Sq_tdata;
-//	wire Sq_Re_Im_tready;
-//	wire Add_tvalid;
-//	wire [31:0] Ab_Mag_tdata;
+	wire Sq_Re_Im_tready;
+	wire Add_tvalid;
+	wire [31:0] Ab_Mag_tdata;
 
 	// Instantiate the Unit Under Test (UUT)
 	Absolute_Magnitude uut (
@@ -74,15 +70,13 @@ module Ab_Mag_tb;
 		.Im_tvalid(Im_tvalid), 
 		.Re_tready(Re_tready), 
 		.Im_tready(Im_tready), 
-		.Sq_tvalid(Sq_tvalid), 
 		.Sq_tready(Sq_tready),
-		.Re_Sq_tdata(Re_Sq_tdata),
-		.Im_Sq_tdata(Im_Sq_tdata)
-/*		.Sq_Re_Im_tready(Sq_Re_Im_tready), 
+		.Sq_tvalid(Sq_tvalid), 
+		.Sq_Re_Im_tready(Sq_Re_Im_tready), 
 		.Add_tvalid(Add_tvalid), 
 		.Add_tready(Add_tready), 
 		.Ab_Mag_tdata(Ab_Mag_tdata)
-*/	);
+	);
 
 	initial begin
 		aclk = 0;
@@ -107,6 +101,7 @@ module Ab_Mag_tb;
 		Re_tvalid = 0;
 		Im_tvalid = 0;
 		Sq_tready = 0;
+		Add_tready = 0;
 
 		// Wait 100 ns for global reset to finish
 		#50;
@@ -143,11 +138,11 @@ module Ab_Mag_tb;
 		@(posedge aclk);
 		end
 
-		while ((Re_tready == 0) && (Im_tready == 0))begin //wait for the multiplier to get ready
+		while ((Re_tready == 0) && (Im_tready == 0))begin //wait for the multiplier input to get ready
 		@(posedge aclk);
 		end
 
-		while (m_axis_data_tvalid == 1) begin //wait until FFT output finished.
+		while (m_axis_data_tvalid == 1) begin //wait until FFT processing is finished.
 			Re_tvalid = 1; //set valid for Real and Imag Input
 			Im_tvalid = 1;
 			m_axis_data_tready = 1; //set valid (get the fft output data)
@@ -161,13 +156,19 @@ module Ab_Mag_tb;
 				Im_tvalid = 0;
 				m_axis_data_tready = 0;
 				Sq_tready = 1;  //set valid (get the Multiplier output data)
-				if(i==0) $display("\tImaginary Square Value\t\t\tReal Square Value\n");
-				$display("\t%b,,%b\n\n",Im_Sq_tdata,Re_Sq_tdata);
+				while (Add_tvalid == 0)begin //wait for the Multiplier output.
 				@(posedge aclk);
+				end
+				while(Add_tvalid == 1) begin
+					Add_tready = 1;  //set valid (get the Adder output data)
+					if(i==0) $display("\tMagnitude Value\n");
+					$display("\t''%b\n",Ab_Mag_tdata);
+					@(posedge aclk);
+				end
 			end
 		end
 
 		@(posedge aclk); $finish;
-	end      
-      
+	end
+
 endmodule

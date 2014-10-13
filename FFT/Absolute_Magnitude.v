@@ -38,24 +38,18 @@ module Absolute_Magnitude(
 //Inputs for Multiplier Core
 	input Re_tvalid,
 	input Im_tvalid,
-
 	output Re_tready,
 	output Im_tready,
-
-	output Sq_tvalid,
 	input Sq_tready,
+	output Sq_tvalid,
 
-	output [31:0] Re_Sq_tdata,
-	output [31:0] Im_Sq_tdata
+//Inputs for Addition Core
 
-/*//Inputs for Addition Core
-
-//	input Sq_Re_Im_tvalid,
 	output Sq_Re_Im_tready,
 	output Add_tvalid,
 	input Add_tready,
 	output [31:0] Ab_Mag_tdata
-*/    );
+    );
 
 /*####### Minimizing the same signals of Magnitude Module ########*/
 
@@ -63,10 +57,10 @@ module Absolute_Magnitude(
 //For the real and imaginary input data signals
 	wire [31:0] Re_tdata;
 	wire [31:0] Im_tdata;
-/*//For the real and imaginary output of MultiCore and input of AddCore data signals
+//For the real and imaginary output of MultiCore and input of AddCore data signals
 	wire [31:0] Re_Sq_tdata;
 	wire [31:0] Im_Sq_tdata;
-*/
+
 
 /*** Ouput control signals for input data, give by the MultiCore ***/
 //For real input
@@ -83,10 +77,9 @@ module Absolute_Magnitude(
 	wire Im_Sq_tvalid;
 	assign Sq_tvalid = Re_Sq_tvalid && Im_Sq_tvalid;
 	
-/*//For the AddCore
-	reg Sq_tready;
+//For the AddCore
 	reg Sq_Re_Im_tvalid;
-*/
+
 
 /*For FFT Module*/
 
@@ -150,7 +143,7 @@ MultiFloat Imag_Square(
   .m_axis_result_tdata(Im_Sq_tdata) // output [31 : 0] m_axis_result_tdata
 );
 
-/*//Ouput control signals for input data, give by the AddCore
+//Ouput control signals for input data, give by the AddCore
 	wire Re_Sq_tready;
 	wire Im_Sq_tready;
 	assign Sq_Re_Im_tready = Re_Sq_tready && Im_Sq_tready;
@@ -170,17 +163,16 @@ AddFloat AddRealImag(
   .m_axis_result_tdata(Ab_Mag_tdata) // output [31 : 0] m_axis_result_tdata
 );
 
-
 always@(posedge aclk)
-//AddCore is ready to accept data and Output of MultiCore is Valid, Real and Imag tready is to be sure
-	if(((Sq_Re_Im_tready == 1) && (Sq_tvalid == 1) && (Re_tready == 1) && (Im_tready == 1)) == 1) begin 
-		Sq_tready = 1; // Get the Output of MultiCore
+//AddCore is ready to accept input data and Output of MultiCore is Ready, Real and Imag tready is to be sure
+	if(((Sq_Re_Im_tready == 1) && (Add_tvalid == 0) && (Sq_tvalid == 1)) == 1) begin 
 		Sq_Re_Im_tvalid = 1;	//	Start giving the input in AddCore
 	end
+	else if(Add_tvalid == 1) begin
+		Sq_Re_Im_tvalid = 0;	//	wait until output is reg's is empty to get input data
+	end
 	else begin
-		Sq_tready = 0; // wait for the valid Output of MultiCore
 		Sq_Re_Im_tvalid = 0;	//	wait for AddCore to be ready
 	end
-*/
 
 endmodule
