@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="746" delta="old" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\floating_point_v6_1_xst.vhd" Line 586: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\floating_point_v6_1_xst.vhd" Line 641: Assignment to <arg fmt="%s" index="1">s_axis_a_tdata_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\floating_point_v6_1_xst.vhd" Line 682: Assignment to <arg fmt="%s" index="1">m_axis_result_tready_i</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="old" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\floating_point_pkg_v6_1.vhd" Line 6766: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="old" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\xbip_pipe_v2_0\xbip_pipe_v2_0_xst.vhd" Line 207: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="871" delta="new" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\flt_add\flt_add_lat_exp.vhd" Line 332: Using initial value <arg fmt="%s" index="1">&apos;0&apos;</arg> for <arg fmt="%s" index="2">can_sign_mux</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\shared\carry_chain.vhd" Line 201: Net &lt;<arg fmt="%s" index="1">carrys_int_reg[3]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\shared\carry_chain.vhd" Line 202: Net &lt;<arg fmt="%s" index="1">q_int[3]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\shared\carry_chain.vhd" Line 198: Net &lt;<arg fmt="%s" index="1">carry[9]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\flt_add\flt_add_lat_exp.vhd" Line 1322: Assignment to <arg fmt="%s" index="1">a_exp_flt_all_zero_align</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\flt_add\flt_add_lat_exp.vhd" Line 1340: Assignment to <arg fmt="%s" index="1">b_exp_flt_all_zero_align</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\flt_add\flt_add_lat_exp.vhd" Line 1413: Assignment to <arg fmt="%s" index="1">b_largest_align</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\flt_add\flt_add_lat_exp.vhd" Line 1663: Assignment to <arg fmt="%s" index="1">zero_align2</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\flt_add\flt_add_lat_exp.vhd" Line 311: Net &lt;<arg fmt="%s" index="1">int32_mux</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\flt_add\flt_add_lat_exp.vhd" Line 312: Net &lt;<arg fmt="%s" index="1">int32_pos_mant_over_mux</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\flt_add\flt_add_lat_exp.vhd" Line 313: Net &lt;<arg fmt="%s" index="1">int32_neg_mant_over_mux</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\flt_add\flt_add_lat_exp.vhd" Line 346: Net &lt;<arg fmt="%s" index="1">int32_align</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\flt_add\flt_add_lat_exp.vhd" Line 348: Net &lt;<arg fmt="%s" index="1">int32_neg_mant_over_align</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\flt_add\flt_add_lat_exp.vhd" Line 349: Net &lt;<arg fmt="%s" index="1">int32_pos_mant_over_align</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\flt_add\flt_add_lat_exp.vhd" Line 400: Net &lt;<arg fmt="%s" index="1">pos_inf_sel</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\flt_add\flt_add_lat_exp.vhd" Line 401: Net &lt;<arg fmt="%s" index="1">rnd_inf_sel</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\flt_add\flt_add_lat_exp.vhd" Line 403: Net &lt;<arg fmt="%s" index="1">rnd_tz_sel</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\flt_add\flt_add_lat_exp.vhd" Line 408: Net &lt;<arg fmt="%s" index="1">can_sign_su</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\flt_add\flt_add_lat_exp.vhd" Line 430: Net &lt;<arg fmt="%s" index="1">int32_pre_op</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\flt_add\flt_add_lat.vhd" Line 846: Assignment to <arg fmt="%s" index="1">res_zeros_rnd</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\shared\flt_round_bit.vhd" Line 179: Assignment to <arg fmt="%s" index="1">rnd_inf</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\shared\flt_round_bit.vhd" Line 180: Assignment to <arg fmt="%s" index="1">inf_neg</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\flt_add\flt_add_lat.vhd" Line 302: Net &lt;<arg fmt="%s" index="1">int32_ip</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="746" delta="old" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\floating_point_pkg_v6_1.vhd" Line 7454: Range is empty (null range)
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\floating_point_v6_1_xst.vhd" Line 417: Net &lt;<arg fmt="%s" index="1">s_axis_b_tuser_i[0]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\floating_point_v6_1_xst.vhd" Line 418: Net &lt;<arg fmt="%s" index="1">s_axis_b_tlast_i</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\floating_point_v6_1_xst.vhd" Line 422: Net &lt;<arg fmt="%s" index="1">m_axis_z_tdata_operation[5]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\floating_point_v6_1_xst.vhd" Line 449: Net &lt;<arg fmt="%s" index="1">divide_by_zero_ud</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\floating_point_v6_1_xst.vhd" Line 605: Net &lt;<arg fmt="%s" index="1">m_axis_result_tuser_not_abs[0]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\floating_point_v6_1\floating_point_v6_1_xst.vhd" Line 607: Net &lt;<arg fmt="%s" index="1">m_axis_result_tlast_not_abs</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\AddFloat.vhd</arg>&quot; line <arg fmt="%s" index="2">159</arg>: Output port &lt;<arg fmt="%s" index="3">m_axis_result_tuser</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\AddFloat.vhd</arg>&quot; line <arg fmt="%s" index="2">159</arg>: Output port &lt;<arg fmt="%s" index="3">s_axis_operation_tready</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\ZedBoard\demo\ISE_project\FFT\FFT\ipcore_dir\tmp\_cg\_dbg\AddFloat.vhd</arg>&quot; line <arg fmt="%s" index="2">159</arg>: Output port &lt;<arg fmt="%s" index="3">m_axis_result_tlast</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="638" delta="new" >in unit <arg fmt="%s" index="1">U0/i_synth</arg> Conflict on KEEP property on signal <arg fmt="%s" index="2">ADDSUB_OP.ADDSUB/LOW_LAT.OP/EXP/INF_MAX_DELAY/i_pipe/opt_has_pipe.first_q</arg> and <arg fmt="%s" index="3">ADDSUB_OP.ADDSUB/LOW_LAT.OP/EXP/ALN_LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q&lt;8&gt;</arg> <arg fmt="%s" index="4">ADDSUB_OP.ADDSUB/LOW_LAT.OP/EXP/ALN_LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q&lt;8&gt;</arg> signal will be lost.
+</msg>
+
+<msg type="warning" file="Xst" num="638" delta="new" >in unit <arg fmt="%s" index="1">U0/i_synth</arg> Conflict on KEEP property on signal <arg fmt="%s" index="2">ADDSUB_OP.ADDSUB/LOW_LAT.OP/EXP/ALN_LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q&lt;8&gt;</arg> and <arg fmt="%s" index="3">ADDSUB_OP.ADDSUB/LOW_LAT.OP/EXP/OVERFLOW_OP_DEL/i_pipe/opt_has_pipe.first_q</arg> <arg fmt="%s" index="4">ADDSUB_OP.ADDSUB/LOW_LAT.OP/EXP/OVERFLOW_OP_DEL/i_pipe/opt_has_pipe.first_q</arg> signal will be lost.
+</msg>
+
+<msg type="warning" file="Xst" num="638" delta="new" >in unit <arg fmt="%s" index="1">U0/i_synth</arg> Conflict on KEEP property on signal <arg fmt="%s" index="2">ADDSUB_OP.ADDSUB/LOW_LAT.OP/EXP/ALN_LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q&lt;8&gt;</arg> and <arg fmt="%s" index="3">ADDSUB_OP.ADDSUB/LOW_LAT.OP/EXP/STATE_ALIGN_DELAY/i_pipe/opt_has_pipe.first_q&lt;2&gt;</arg> <arg fmt="%s" index="4">ADDSUB_OP.ADDSUB/LOW_LAT.OP/EXP/STATE_ALIGN_DELAY/i_pipe/opt_has_pipe.first_q&lt;2&gt;</arg> signal will be lost.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

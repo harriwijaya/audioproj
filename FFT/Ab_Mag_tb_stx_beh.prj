@@ -1,0 +1,6 @@
+verilog isim_temp "ipcore_dir/FFTCore.v"
+verilog isim_temp "ipcore_dir/MultiFloat.v"
+verilog isim_temp "FFTCore_TopModule.v"
+verilog isim_temp "Absolute_Magnitude.v"
+verilog isim_temp "Ab_Mag_tb.v"
+verilog isim_temp "C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v"

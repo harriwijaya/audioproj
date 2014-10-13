@@ -1,0 +1,29 @@
+Command line:
+   MultiFloat_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49173
+
+Sun Oct 12 03:31:13 2014
+
+
+ Elaboration Time: 0.171601 sec
+
+ Current Memory Usage: 494.621 Meg
+
+ Total Signals          : 3911
+ Total Nets             : 2915
+ Total Signal Drivers   : 1571
+ Total Blocks           : 827
+ Total Primitive Blocks : 626
+ Total Processes        : 2924
+ Total Traceable Variables  : 2126
+ Total Scalar Nets and Variables : 17630
+Total Line Count : 9199
+
+ Total Simulation Time: 0.577203 sec
+
+ Current Memory Usage: 495.669 Meg
+
+Sun Oct 12 03:33:00 2014
+

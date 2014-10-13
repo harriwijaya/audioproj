@@ -1,0 +1,29 @@
+Command line:
+   FFTCore_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49165
+
+Sun Oct 12 03:19:09 2014
+
+
+ Elaboration Time: 6.83284 sec
+
+ Current Memory Usage: 601.67 Meg
+
+ Total Signals          : 69390
+ Total Nets             : 40303
+ Total Signal Drivers   : 25240
+ Total Blocks           : 13523
+ Total Primitive Blocks : 10772
+ Total Processes        : 47997
+ Total Traceable Variables  : 37506
+ Total Scalar Nets and Variables : 1730061
+Total Line Count : 168875
+
+ Total Simulation Time: 7.47245 sec
+
+ Current Memory Usage: 603.767 Meg
+
+Sun Oct 12 03:20:18 2014
+

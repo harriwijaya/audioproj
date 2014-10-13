@@ -1,0 +1,4 @@
+verilog work "ipcore_dir/FFTCore.v"
+verilog work "ipcore_dir/MultiFloat.v"
+verilog work "FFTCore_TopModule.v"
+verilog work "Absolute_Magnitude.v"

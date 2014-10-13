@@ -1,0 +1,29 @@
+Command line:
+   AddFloat_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49179
+
+Sun Oct 12 03:38:19 2014
+
+
+ Elaboration Time: 0.374402 sec
+
+ Current Memory Usage: 500.658 Meg
+
+ Total Signals          : 9794
+ Total Nets             : 3051
+ Total Signal Drivers   : 3710
+ Total Blocks           : 2417
+ Total Primitive Blocks : 1735
+ Total Processes        : 6955
+ Total Traceable Variables  : 5687
+ Total Scalar Nets and Variables : 34501
+Total Line Count : 24565
+
+ Total Simulation Time: 0.546004 sec
+
+ Current Memory Usage: 500.658 Meg
+
+Sun Oct 12 03:39:24 2014
+

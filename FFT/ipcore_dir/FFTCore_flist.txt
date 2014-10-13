@@ -1,0 +1,19 @@
+# Output products list for <FFTCore>
+FFTCore.asy
+FFTCore.gise
+FFTCore.ngc
+FFTCore.sym
+FFTCore.v
+FFTCore.veo
+FFTCore.xco
+FFTCore.xise
+FFTCore\cmodel\xfft_v8_0_bitacc_cmodel_lin.zip
+FFTCore\cmodel\xfft_v8_0_bitacc_cmodel_lin64.zip
+FFTCore\cmodel\xfft_v8_0_bitacc_cmodel_nt.zip
+FFTCore\cmodel\xfft_v8_0_bitacc_cmodel_nt64.zip
+FFTCore\doc\ds808_xfft.pdf
+FFTCore\doc\xfft_v8_0_readme.txt
+FFTCore\doc\xfft_v8_0_vinfo.html
+FFTCore_flist.txt
+FFTCore_xmdf.tcl
+demo_tb\tb_FFTCore.vhd

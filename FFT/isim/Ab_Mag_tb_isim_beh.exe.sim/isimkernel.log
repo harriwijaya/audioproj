@@ -1,0 +1,29 @@
+Command line:
+   Ab_Mag_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  61261
+
+Mon Oct 13 15:50:23 2014
+
+
+ Elaboration Time: 3.0625 sec
+
+ Current Memory Usage: 767.705 Meg
+
+ Total Signals          : 77189
+ Total Nets             : 46108
+ Total Signal Drivers   : 28372
+ Total Blocks           : 15172
+ Total Primitive Blocks : 12022
+ Total Processes        : 53828
+ Total Traceable Variables  : 41708
+ Total Scalar Nets and Variables : 1756736
+Total Line Count : 187126
+
+ Total Simulation Time: 11.6094 sec
+
+ Current Memory Usage: 767.705 Meg
+
+Mon Oct 13 20:45:41 2014
+

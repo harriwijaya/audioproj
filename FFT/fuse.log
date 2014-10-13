@@ -1,0 +1,123 @@
+Running: C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/workspace/ise_project/FFT/Ab_Mag_tb_isim_beh.exe -prj C:/workspace/ise_project/FFT/Ab_Mag_tb_beh.prj work.Ab_Mag_tb work.glbl 
+ISim P.49d (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/workspace/ise_project/FFT/ipcore_dir/FFTCore.v" into library work
+Analyzing Verilog file "C:/workspace/ise_project/FFT/ipcore_dir/MultiFloat.v" into library work
+WARNING:HDLCompiler:687 - "C:/workspace/ise_project/FFT/ipcore_dir/MultiFloat.v" Line 6341: Illegal redeclaration of module <glbl>.
+Analyzing Verilog file "C:/workspace/ise_project/FFT/FFTCore_TopModule.v" into library work
+Analyzing Verilog file "C:/workspace/ise_project/FFT/Absolute_Magnitude.v" into library work
+Analyzing Verilog file "C:/workspace/ise_project/FFT/Ab_Mag_tb.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v" into library work
+WARNING:HDLCompiler:687 - "C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v" Line 5: Illegal redeclaration of module <glbl>.
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "C:/workspace/ise_project/FFT/Absolute_Magnitude.v" Line 100: Port event_frame_started is not connected to this instance
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 968: Element index 4 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 972: Element index 5 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 976: Element index 6 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 980: Element index 7 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1047: Element index 4 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1048: Element index 5 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1049: Element index 6 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1050: Element index 7 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1112: Element index 4 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1113: Element index 5 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1114: Element index 6 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1115: Element index 7 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1250: Element index 39 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1251: Element index 4 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1256: Element index 47 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1257: Element index 5 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1262: Element index 55 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1263: Element index 6 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1268: Element index 63 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1269: Element index 7 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1410: Element index 39 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1411: Element index 4 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1416: Element index 47 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1417: Element index 5 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1422: Element index 55 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1423: Element index 6 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1428: Element index 63 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/ARAMB36_INTERNAL.v" Line 1429: Element index 7 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 1660: Element index 4 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 1664: Element index 5 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 1668: Element index 6 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 1672: Element index 7 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 1781: Element index 4 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 1785: Element index 5 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 1789: Element index 6 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 1793: Element index 7 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 1922: Element index 4 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 1926: Element index 5 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 1930: Element index 6 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 1934: Element index 7 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2063: Element index 4 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2067: Element index 5 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2071: Element index 6 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2075: Element index 7 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2201: Element index 4 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2202: Element index 5 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2203: Element index 6 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2204: Element index 7 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2339: Element index 39 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2340: Element index 4 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2345: Element index 47 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2346: Element index 5 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2351: Element index 55 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2352: Element index 6 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2357: Element index 63 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2358: Element index 7 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2523: Element index 39 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2524: Element index 4 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2529: Element index 47 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2530: Element index 5 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2535: Element index 55 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2536: Element index 6 into memp is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2541: Element index 63 into mem is out of bounds
+WARNING:HDLCompiler:1007 - "N:/P.49d/rtf/verilog/src/unisims/RAMB36E1.v" Line 2542: Element index 7 into memp is out of bounds
+Completed static elaboration
+Compiling module INV
+Compiling module FD
+Compiling module LUT6(INIT=64'b111111111111111111...
+Compiling module LUT5(INIT=32'b010000000000000000...
+Compiling module LUT4(INIT=16'b011000100010001)
+Compiling module LUT2(INIT=4'b1000)
+Compiling module FDSE(INIT=1'b0)
+Compiling module LUT3(INIT=8'b11011000)
+Compiling module FDRE
+Compiling module FDR
+Compiling module GND
+Compiling module XORCY
+Compiling module MUXCY
+Compiling module SRLC16E
+Compiling module FDS
+Compiling module FDE
+Compiling module LUT1(INIT=2'b10)
+Compiling module SRL16E
+Compiling module MUXF7
+Compiling module MUXF8
+Compiling module VCC
+Compiling module ARAMB36_INTERNAL(DOA_REG=1,DOB_R...
+Compiling module RAMB18SDP(DO_REG=1,SIM_COLLISION...
+Compiling module RB36_INTERNAL_VLOG(DOA_REG=1,DOB...
+Compiling module RAMB36E1(DOA_REG=1,DOB_REG=1,INI...
+Compiling module DSP48E(CARRYINSELREG=0,CREG=0,MA...
+Compiling module DSP48E(ACASCREG=2,AREG=2,BCASCRE...
+Compiling module DSP48E(A_INPUT="CASCADE",BCASCRE...
+Compiling module SRLC32E
+Compiling module FFTCore
+Compiling module FFTCore_TopModule
+Compiling module DSP48E1(ADREG=0,ALUMODEREG=0,CAR...
+Compiling module DSP48E1(ADREG=0,A_INPUT="CASCADE...
+Compiling module MultiFloat
+Compiling module Absolute_Magnitude
+Compiling module Ab_Mag_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 7 sub-compilation(s) to finish...
+Compiled 228 Verilog Units
+Built simulation executable C:/workspace/ise_project/FFT/Ab_Mag_tb_isim_beh.exe
+Fuse Memory Usage: 122968 KB
+Fuse CPU Usage: 5671 ms
