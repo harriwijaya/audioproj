@@ -1,0 +1,20 @@
+
+**** Build of configuration Debug for project peripheral_test ****
+
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../peripheral_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o"src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+' '
+Building target: peripheral_test.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../peripheral_test_bsp/ps7_cortexa9_0/lib -o"peripheral_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: peripheral_test.elf
+' '
+Invoking: ARM Print Size
+arm-xilinx-eabi-size peripheral_test.elf  |tee "peripheral_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  47984	   1096	  27736	  76816	  12c10	peripheral_test.elf
+Finished building: peripheral_test.elf.size
+' '

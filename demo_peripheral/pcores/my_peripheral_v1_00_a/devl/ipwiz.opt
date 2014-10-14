@@ -1,0 +1,10 @@
+-batch 
+-create my_peripheral 
+-ver 1.00.a 
+-dir "C:\workspace\ise_project\audioproj\demo_peripheral" 
+-lang verilog 
+-bus axi4 s 
+-burst s 32 
+-rfifo 1 32 
+-arn 1 
+-xps 

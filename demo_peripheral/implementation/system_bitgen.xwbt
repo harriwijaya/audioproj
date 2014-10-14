@@ -1,0 +1,7 @@
+INFILE=C:\workspace\ise_project\audioproj\demo_peripheral\implementation\system.ncd
+OUTFILE=C:\workspace\ise_project\audioproj\demo_peripheral\implementation\system.bit
+FAMILY=Zynq
+PART=xc7z020-1clg484
+WORKINGDIR=C:\workspace\ise_project\audioproj\demo_peripheral\implementation
+LICENSE=WebPack
+USER_INFO=210927128_0_0_107

@@ -1,0 +1,52 @@
+/*
+ * Copyright (c) 2009 Xilinx, Inc.  All rights reserved.
+ *
+ * Xilinx, Inc.
+ * XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS" AS A
+ * COURTESY TO YOU.  BY PROVIDING THIS DESIGN, CODE, OR INFORMATION AS
+ * ONE POSSIBLE   IMPLEMENTATION OF THIS FEATURE, APPLICATION OR
+ * STANDARD, XILINX IS MAKING NO REPRESENTATION THAT THIS IMPLEMENTATION
+ * IS FREE FROM ANY CLAIMS OF INFRINGEMENT, AND YOU ARE RESPONSIBLE
+ * FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE FOR YOUR IMPLEMENTATION.
+ * XILINX EXPRESSLY DISCLAIMS ANY WARRANTY WHATSOEVER WITH RESPECT TO
+ * THE ADEQUACY OF THE IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO
+ * ANY WARRANTIES OR REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE
+ * FROM CLAIMS OF INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY
+ * AND FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ */
+
+/*
+ * helloworld.c: simple test application
+ */
+
+#include <stdio.h>
+#include "platform.h"
+#include "xparameters.h"
+#include "xil_io.h"
+
+//void print(char *str);
+
+int main()
+{
+    //init_platform();
+	u32 i;
+	u32 ret[10];
+
+    xil_printf("Hello World\n\r");
+
+    for(i=0;i<10;i++)
+    {
+    	//keep overwriting same address...
+    	Xil_Out32(XPAR_MY_PERIPHERAL_0_S_AXI_MEM0_BASEADDR, i);
+    	xil_printf("Sent data %0x\n\r", i);
+    }
+
+    for(i=0;i<10;i++)
+    {
+    	// so the return data will be the last written... (in hex)
+       	ret[i] = Xil_In32(XPAR_MY_PERIPHERAL_0_S_AXI_MEM0_BASEADDR);
+       	xil_printf("Received data %0x in %0x\n\r", ret[i], i);
+    }
+    return 0;
+}
