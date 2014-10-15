@@ -1,0 +1,12 @@
+##############################################################################
+## Filename:          C:/workspace/ise_project/audioproj/ip_integration/pcores/ip_integration_peripheral_v1_00_a/data/ip_integration_peripheral_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Tue Oct 14 16:18:29 2014 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a  all 
+lib axi_slave_burst_v1_00_a  all 
+lib ip_integration_peripheral_v1_00_a adder_ip verilog
+lib ip_integration_peripheral_v1_00_a adder_ip_wrapper verilog
+lib ip_integration_peripheral_v1_00_a user_logic verilog
+lib ip_integration_peripheral_v1_00_a ip_integration_peripheral vhdl
