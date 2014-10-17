@@ -2311,11 +2311,11 @@ axi4lite_0/si_converter_bank/gen_conv_slot[0].clock_conv_inst/S_AXI_ACLK|    1.1
 
 
 Total REAL time to Xst completion: 17.00 secs
-Total CPU time to Xst completion: 16.40 secs
+Total CPU time to Xst completion: 17.11 secs
  
 --> 
 
-Total memory usage is 415392 kilobytes
+Total memory usage is 415520 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  248 (   0 filtered)

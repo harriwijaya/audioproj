@@ -123,6 +123,7 @@ output                                    Type_of_xfer;
   // --USER nets declarations added here, as needed for user logic
 
 parameter NUM_BYTE_LANES = (C_SLV_DWIDTH+7)/8;
+
 reg [C_SLV_DWIDTH-1 : 0] mem_data_out [0 : C_NUM_MEM-1];
 wire [7:0] mem_address;
 wire mem_select;
@@ -208,7 +209,7 @@ begin
   begin
     for (byte_index=0;byte_index<=NUM_BYTE_LANES-1;byte_index=byte_index+1)
     begin
-      mem_data_out[i][(byte_index*8) +: 8] <= data_out[i][byte_index];
+      mem_data_out[i][(byte_index*8) +: 8] <= ( data_out[i][byte_index] +1 );
     end
   end
 end //always @(*) begin

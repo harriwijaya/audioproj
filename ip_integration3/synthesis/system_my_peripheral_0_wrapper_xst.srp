@@ -3,7 +3,7 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to C:\workspace\ise_project\audioproj\ip_integration3\synthesis\xst_temp_dir\
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.11 secs
  
 --> 
@@ -486,6 +486,7 @@ WARNING:HDLCompiler:1127 - "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pc
 Going to verilog side to elaborate module user_logic
 
 Elaborating module <user_logic(C_SLV_AWIDTH=32,C_SLV_DWIDTH=32,C_NUM_MEM=1)>.
+WARNING:HDLCompiler:413 - "C:/workspace/ise_project/audioproj/ip_integration3/pcores/my_peripheral_v1_00_a/hdl/verilog/user_logic.v" Line 212: Result of 9-bit expression is truncated to fit in 8-bit target.
 Back to vhdl to continue elaboration
 
 =========================================================================
@@ -9076,26 +9077,34 @@ WARNING:Xst:653 - Signal <Type_of_xfer> is used but never assigned. This sourcel
     Found 1-bit register for signal <ram<0><0><255><0>>.
     Found 8-bit register for signal <read_address>.
     Found 1-bit register for signal <mem_read_ack_dly1>.
-    Found 32-bit 256-to-1 multiplexer for signal <mem_data_out<0>> created at line 126.
+    Found 8-bit adder for signal <mem_data_out<0><7:0>> created at line 212.
+    Found 8-bit adder for signal <mem_data_out<0><15:8>> created at line 212.
+    Found 8-bit adder for signal <mem_data_out<0><23:16>> created at line 212.
+    Found 8-bit adder for signal <mem_data_out<0><31:24>> created at line 212.
+    Found 8-bit 256-to-1 multiplexer for signal <data_out<0><0>> created at line 201.
+    Found 8-bit 256-to-1 multiplexer for signal <data_out<0><1>> created at line 201.
+    Found 8-bit 256-to-1 multiplexer for signal <data_out<0><2>> created at line 201.
+    Found 8-bit 256-to-1 multiplexer for signal <data_out<0><3>> created at line 201.
     Summary:
+	inferred   4 Adder/Subtractor(s).
 	inferred 8202 D-type flip-flop(s).
-	inferred   3 Multiplexer(s).
+	inferred   6 Multiplexer(s).
 Unit <user_logic> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 16
+# Adders/Subtractors                                   : 20
  2-bit adder                                           : 4
  3-bit adder                                           : 2
  4-bit addsub                                          : 2
  6-bit addsub                                          : 2
  7-bit adder                                           : 1
- 8-bit adder                                           : 1
+ 8-bit adder                                           : 5
  8-bit subtractor                                      : 4
-# Registers                                            : 8310
- 1-bit register                                        : 8259
+# Registers                                            : 1142
+ 1-bit register                                        : 67
  12-bit register                                       : 2
  2-bit register                                        : 3
  3-bit register                                        : 1
@@ -9103,21 +9112,21 @@ Macro Statistics
  33-bit register                                       : 32
  4-bit register                                        : 4
  6-bit register                                        : 2
- 8-bit register                                        : 6
+ 8-bit register                                        : 1030
 # Comparators                                          : 1
  6-bit comparator lessequal                            : 1
-# Multiplexers                                         : 147
+# Multiplexers                                         : 150
  1-bit 2-to-1 multiplexer                              : 127
  1-bit 4-to-1 multiplexer                              : 3
  2-bit 2-to-1 multiplexer                              : 2
  3-bit 2-to-1 multiplexer                              : 1
  32-bit 2-to-1 multiplexer                             : 3
- 32-bit 256-to-1 multiplexer                           : 1
  33-bit 32-to-1 multiplexer                            : 1
  4-bit 2-to-1 multiplexer                              : 2
  4-bit 3-to-1 multiplexer                              : 1
  6-bit 2-to-1 multiplexer                              : 2
  8-bit 2-to-1 multiplexer                              : 4
+ 8-bit 256-to-1 multiplexer                            : 4
 # FSMs                                                 : 2
 # Xors                                                 : 9
  1-bit xor2                                            : 9
@@ -9183,11 +9192,12 @@ Unit <dynshreg_f> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 10
+# Adders/Subtractors                                   : 14
  2-bit adder                                           : 4
  4-bit addsub                                          : 2
  6-bit adder                                           : 1
  6-bit addsub                                          : 2
+ 8-bit adder                                           : 4
  8-bit subtractor                                      : 1
 # Counters                                             : 2
  8-bit down counter                                    : 2
@@ -9201,16 +9211,16 @@ Macro Statistics
  32-bit dynamic shift register                         : 33
 # Comparators                                          : 1
  6-bit comparator lessequal                            : 1
-# Multiplexers                                         : 140
+# Multiplexers                                         : 143
  1-bit 2-to-1 multiplexer                              : 125
  1-bit 4-to-1 multiplexer                              : 3
  2-bit 2-to-1 multiplexer                              : 2
  32-bit 2-to-1 multiplexer                             : 3
- 32-bit 256-to-1 multiplexer                           : 1
  4-bit 2-to-1 multiplexer                              : 2
  4-bit 3-to-1 multiplexer                              : 1
  6-bit 2-to-1 multiplexer                              : 2
  8-bit 2-to-1 multiplexer                              : 1
+ 8-bit 256-to-1 multiplexer                            : 4
 # FSMs                                                 : 2
 # Xors                                                 : 9
  1-bit xor2                                            : 9
@@ -9358,15 +9368,20 @@ WARNING:Xst:2677 - Node <my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIO
 WARNING:Xst:2677 - Node <my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.ADDRESS_DECODE_I/wrce_out_i_0_32> of sequential type is unconnected in block <system_my_peripheral_0_wrapper>.
 WARNING:Xst:2677 - Node <my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.ADDRESS_DECODE_I/wrce_out_i_0_33> of sequential type is unconnected in block <system_my_peripheral_0_wrapper>.
 WARNING:Xst:2677 - Node <my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.ADDRESS_DECODE_I/wrce_out_i_0_34> of sequential type is unconnected in block <system_my_peripheral_0_wrapper>.
+WARNING:Xst:2677 - Node <my_peripheral_0/USER_LOGIC_I/read_address_0_33> of sequential type is unconnected in block <system_my_peripheral_0_wrapper>.
+WARNING:Xst:2677 - Node <my_peripheral_0/USER_LOGIC_I/read_address_1_33> of sequential type is unconnected in block <system_my_peripheral_0_wrapper>.
 FlipFlop my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.ADDRESS_DECODE_I/rdce_out_i_0 has been replicated 1 time(s)
 FlipFlop my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.ADDRESS_DECODE_I/wrce_out_i_0 has been replicated 69 time(s)
-FlipFlop my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_ps_FSM_FFd1 has been replicated 1 time(s)
-FlipFlop my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_ps_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_ps_FSM_FFd1 has been replicated 2 time(s)
+FlipFlop my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_ps_FSM_FFd2 has been replicated 2 time(s)
 FlipFlop my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_ps_FSM_FFd3 has been replicated 2 time(s)
 FlipFlop my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_ps_FSM_FFd4 has been replicated 1 time(s)
 FlipFlop my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.READ_DATA_SM_I/Rd_data_sm_ps_IDLE has been replicated 1 time(s)
 FlipFlop my_peripheral_0/USER_LOGIC_I/mem_read_ack_dly1 has been replicated 1 time(s)
 FlipFlop my_peripheral_0/USER_LOGIC_I/mem_read_ack_dly2 has been replicated 2 time(s)
+FlipFlop my_peripheral_0/USER_LOGIC_I/read_address_0 has been replicated 69 time(s)
+FlipFlop my_peripheral_0/USER_LOGIC_I/read_address_1 has been replicated 33 time(s)
+FlipFlop my_peripheral_0/USER_LOGIC_I/read_address_2 has been replicated 15 time(s)
 
 Final Macro Processing ...
 
@@ -9374,8 +9389,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 8415
- Flip-Flops                                            : 8415
+# Registers                                            : 8532
+ Flip-Flops                                            : 8532
 
 =========================================================================
 
@@ -9398,24 +9413,24 @@ Top Level Output File Name         : system_my_peripheral_0_wrapper.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 5248
+# BELS                             : 5292
 #      GND                         : 1
 #      INV                         : 1
 #      LUT2                        : 30
-#      LUT3                        : 37
-#      LUT4                        : 46
-#      LUT5                        : 89
-#      LUT6                        : 3370
+#      LUT3                        : 42
+#      LUT4                        : 51
+#      LUT5                        : 99
+#      LUT6                        : 3362
 #      MUXCY                       : 28
 #      MUXCY_L                     : 6
 #      MUXF7                       : 1089
-#      MUXF8                       : 512
+#      MUXF8                       : 544
 #      VCC                         : 1
 #      XORCY                       : 38
-# FlipFlops/Latches                : 8415
-#      FD                          : 85
+# FlipFlops/Latches                : 8532
+#      FD                          : 200
 #      FDE                         : 8206
-#      FDR                         : 32
+#      FDR                         : 34
 #      FDRE                        : 85
 #      FDS                         : 7
 # Shift Registers                  : 33
@@ -9428,17 +9443,17 @@ Selected Device : 7z020clg484-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            8415  out of  106400     7%  
- Number of Slice LUTs:                 3606  out of  53200     6%  
-    Number used as Logic:              3573  out of  53200     6%  
+ Number of Slice Registers:            8532  out of  106400     8%  
+ Number of Slice LUTs:                 3618  out of  53200     6%  
+    Number used as Logic:              3585  out of  53200     6%  
     Number used as Memory:               33  out of  17400     0%  
        Number used as SRL:               33
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   9807
-   Number with an unused Flip Flop:    1392  out of   9807    14%  
-   Number with an unused LUT:          6201  out of   9807    63%  
-   Number of fully used LUT-FF pairs:  2214  out of   9807    22%  
+ Number of LUT Flip Flop pairs used:   9914
+   Number with an unused Flip Flop:    1382  out of   9914    13%  
+   Number with an unused LUT:          6296  out of   9914    63%  
+   Number of fully used LUT-FF pairs:  2236  out of   9914    22%  
    Number of unique control sets:      1039
 
 IO Utilization: 
@@ -9468,7 +9483,7 @@ Clock Information:
 -----------------------------------+----------------------------------------------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                                                        | Load  |
 -----------------------------------+----------------------------------------------------------------------------------------------+-------+
-S_AXI_ACLK                         | NONE(my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_ps_FSM_FFd1)| 8448  |
+S_AXI_ACLK                         | NONE(my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_ps_FSM_FFd1)| 8565  |
 -----------------------------------+----------------------------------------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -9480,9 +9495,9 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 3.963ns (Maximum Frequency: 252.334MHz)
+   Minimum period: 3.793ns (Maximum Frequency: 263.644MHz)
    Minimum input arrival time before clock: 3.178ns
-   Maximum output required time after clock: 2.226ns
+   Maximum output required time after clock: 2.129ns
    Maximum combinational path delay: 0.930ns
 
 Timing Details:
@@ -9491,34 +9506,36 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'S_AXI_ACLK'
-  Clock period: 3.963ns (frequency: 252.334MHz)
-  Total number of paths / destination ports: 120518 / 16900
+  Clock period: 3.793ns (frequency: 263.644MHz)
+  Total number of paths / destination ports: 170351 / 17017
 -------------------------------------------------------------------------
-Delay:               3.963ns (Levels of Logic = 6)
-  Source:            my_peripheral_0/USER_LOGIC_I/mem_read_ack_dly2_1 (FF)
-  Destination:       my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/ADDR_TOUT_GEN.apto_cnt_en (FF)
+Delay:               3.793ns (Levels of Logic = 8)
+  Source:            my_peripheral_0/USER_LOGIC_I/ram_5923 (FF)
+  Destination:       my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.READ_DATA_SM_I/RD_DATA_BUFFER_GEN.RDATA_FIFO_I/DYNSHREG_F_I/Mshreg_Dout_0_0 (FF)
   Source Clock:      S_AXI_ACLK rising
   Destination Clock: S_AXI_ACLK rising
 
-  Data Path: my_peripheral_0/USER_LOGIC_I/mem_read_ack_dly2_1 to my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/ADDR_TOUT_GEN.apto_cnt_en
+  Data Path: my_peripheral_0/USER_LOGIC_I/ram_5923 to my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.READ_DATA_SM_I/RD_DATA_BUFFER_GEN.RDATA_FIFO_I/DYNSHREG_F_I/Mshreg_Dout_0_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.282   0.731  my_peripheral_0/USER_LOGIC_I/mem_read_ack_dly2_1 (my_peripheral_0/USER_LOGIC_I/mem_read_ack_dly2_1)
-     LUT5:I0->O           22   0.053   0.549  my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_timeout_int1 (my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_timeout_int)
-     LUT5:I4->O            4   0.053   0.622  my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_timeout_int_IP2Bus_AddrAck_OR_29_o1 (my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_timeout_int_IP2Bus_AddrAck_OR_29_o)
-     LUT6:I3->O            1   0.053   0.413  my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_ps_FSM_FFd4-In2 (my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_ps_FSM_FFd4-In2)
-     LUT6:I5->O            3   0.053   0.499  my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_ps_FSM_FFd4-In10 (my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_ps_FSM_FFd4-In)
-     LUT3:I1->O           20   0.053   0.538  my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_ps_addr_sm_ns_IDLE1 (my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_sm_ns_IDLE)
-     LUT6:I5->O            1   0.053   0.000  my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/ADDR_TOUT_GEN.apto_cnt_en_rstpot (my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/ADDR_TOUT_GEN.apto_cnt_en_rstpot)
-     FD:D                      0.011          my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/ADDR_TOUT_GEN.apto_cnt_en
+     FDE:C->Q              1   0.282   0.739  my_peripheral_0/USER_LOGIC_I/ram_5923 (my_peripheral_0/USER_LOGIC_I/ram_5923)
+     LUT6:I0->O            1   0.053   0.000  my_peripheral_0/USER_LOGIC_I/Mmux_data_out<0><3>_13114 (my_peripheral_0/USER_LOGIC_I/Mmux_data_out<0><3>_13114)
+     MUXF7:I1->O           1   0.217   0.000  my_peripheral_0/USER_LOGIC_I/Mmux_data_out<0><3>_12_f7_54 (my_peripheral_0/USER_LOGIC_I/Mmux_data_out<0><3>_12_f755)
+     MUXF8:I0->O           1   0.160   0.635  my_peripheral_0/USER_LOGIC_I/Mmux_data_out<0><3>_10_f8_33 (my_peripheral_0/USER_LOGIC_I/Mmux_data_out<0><3>_10_f834)
+     LUT6:I2->O            1   0.053   0.000  my_peripheral_0/USER_LOGIC_I/Mmux_data_out<0><3>_511 (my_peripheral_0/USER_LOGIC_I/Mmux_data_out<0><3>_511)
+     MUXF7:I1->O           1   0.217   0.000  my_peripheral_0/USER_LOGIC_I/Mmux_data_out<0><3>_4_f7_4 (my_peripheral_0/USER_LOGIC_I/Mmux_data_out<0><3>_4_f75)
+     MUXF8:I0->O           2   0.160   0.745  my_peripheral_0/USER_LOGIC_I/Mmux_data_out<0><3>_2_f8_4 (my_peripheral_0/USER_LOGIC_I/Madd_mem_data_out<0><31:24>_lut<5>)
+     LUT6:I0->O            2   0.053   0.419  my_peripheral_0/USER_LOGIC_I/Madd_mem_data_out<0><31:24>_cy<5>11 (my_peripheral_0/USER_LOGIC_I/Madd_mem_data_out<0><31:24>_cy<5>)
+     LUT5:I4->O            1   0.053   0.000  my_peripheral_0/USER_LOGIC_I/Mmux_IP2Bus_Data241 (my_peripheral_0/user_IP2Bus_Data<30>)
+     SRLC32E:D                 0.007          my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.READ_DATA_SM_I/RD_DATA_BUFFER_GEN.RDATA_FIFO_I/DYNSHREG_F_I/Mshreg_Dout_1_0
     ----------------------------------------
-    Total                      3.963ns (0.611ns logic, 3.352ns route)
-                                       (15.4% logic, 84.6% route)
+    Total                      3.793ns (1.255ns logic, 2.538ns route)
+                                       (33.1% logic, 66.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'S_AXI_ACLK'
-  Total number of paths / destination ports: 2845 / 407
+  Total number of paths / destination ports: 2876 / 411
 -------------------------------------------------------------------------
 Offset:              3.178ns (Levels of Logic = 6)
   Source:            S_AXI_ARVALID (PAD)
@@ -9531,7 +9548,7 @@ Offset:              3.178ns (Levels of Logic = 6)
     ----------------------------------------  ------------
      LUT2:I0->O            1   0.053   0.739  my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/Mmux_axi_cycle_cmb_int21 (my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/Mmux_axi_cycle_cmb_int2)
      LUT6:I0->O            3   0.053   0.427  my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/Mmux_axi_cycle_cmb_int22 (my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/Mmux_axi_cycle_cmb_int21)
-     LUT3:I2->O            1   0.053   0.725  my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/Mmux_axi_cycle_cmb_int24_SW1 (N44)
+     LUT3:I2->O            1   0.053   0.725  my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/Mmux_axi_cycle_cmb_int24_SW1 (N60)
      LUT6:I1->O            7   0.053   0.453  my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/Mmux_axi_cycle_cmb_int3 (my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/axi_cycle_cmb_int)
      LUT2:I1->O            2   0.053   0.419  my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/S_AXI_ARESETN_axi_cycle_cmb_int_OR_66_o1 (my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/S_AXI_ARESETN_axi_cycle_cmb_int_OR_66_o)
      LUT6:I5->O            1   0.053   0.000  my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/burst_reg_1_rstpot (my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/burst_reg_1_rstpot)
@@ -9544,22 +9561,22 @@ Offset:              3.178ns (Levels of Logic = 6)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'S_AXI_ACLK'
   Total number of paths / destination ports: 80 / 64
 -------------------------------------------------------------------------
-Offset:              2.226ns (Levels of Logic = 3)
-  Source:            my_peripheral_0/USER_LOGIC_I/mem_read_ack_dly2_1 (FF)
+Offset:              2.129ns (Levels of Logic = 3)
+  Source:            my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_ps_FSM_FFd3_1 (FF)
   Destination:       S_AXI_WREADY (PAD)
   Source Clock:      S_AXI_ACLK rising
 
-  Data Path: my_peripheral_0/USER_LOGIC_I/mem_read_ack_dly2_1 to S_AXI_WREADY
+  Data Path: my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_ps_FSM_FFd3_1 to S_AXI_WREADY
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.282   0.731  my_peripheral_0/USER_LOGIC_I/mem_read_ack_dly2_1 (my_peripheral_0/USER_LOGIC_I/mem_read_ack_dly2_1)
-     LUT5:I0->O           22   0.053   0.549  my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_timeout_int1 (my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_timeout_int)
-     LUT3:I2->O            4   0.053   0.505  my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/IP2Bus_WrAck_data_timeout_int_OR_51_o1 (my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/IP2Bus_WrAck_data_timeout_int_OR_51_o)
-     LUT6:I4->O            5   0.053   0.000  my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/Mmux_wready_cmb1 (my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/wready_cmb)
+     FDR:C->Q              2   0.282   0.641  my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_ps_FSM_FFd3_1 (my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/addr_ps_FSM_FFd3_1)
+     LUT4:I0->O           22   0.053   0.549  my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/Mmux_wr_cycle_cmb_int212 (my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/Mmux_wr_cycle_cmb_int21)
+     LUT5:I4->O           14   0.053   0.498  my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/Mmux_awready_cmb11 (my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/awready_cmb)
+     LUT6:I5->O            5   0.053   0.000  my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/Mmux_wready_cmb1 (my_peripheral_0/AXI_SLAVE_BURST_I/SUPPORT_RW_TRANSACTIONS.CONTROL_SM_I/wready_cmb)
     ----------------------------------------
-    Total                      2.226ns (0.441ns logic, 1.785ns route)
-                                       (19.8% logic, 80.2% route)
+    Total                      2.129ns (0.441ns logic, 1.688ns route)
+                                       (20.7% logic, 79.3% route)
 
 =========================================================================
 Timing constraint: Default path analysis
@@ -9589,20 +9606,20 @@ Clock to Setup on destination clock S_AXI_ACLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-S_AXI_ACLK     |    3.963|         |         |         |
+S_AXI_ACLK     |    3.793|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 125.00 secs
-Total CPU time to Xst completion: 124.20 secs
+Total REAL time to Xst completion: 135.00 secs
+Total CPU time to Xst completion: 134.91 secs
  
 --> 
 
-Total memory usage is 531900 kilobytes
+Total memory usage is 499460 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  127 (   0 filtered)
+Number of warnings :  130 (   0 filtered)
 Number of infos    :   16 (   0 filtered)
 

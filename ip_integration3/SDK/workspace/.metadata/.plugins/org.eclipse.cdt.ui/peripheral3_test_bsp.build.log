@@ -23,22 +23,22 @@ Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
 Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
 "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
 "EXTRA_COMPILER_FLAGS=-g"'.
-"Compiling common"
-arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
-"Compiling xadc"
-"Compiling standalone"
-"Compiling gpio"
-"Compiling devcfg"
-"Compiling dmaps"
-"Compiling emacps"
-"Compiling gpiops"
-"Compiling qspips"
-"Compiling scugic"
-"Compiling scutimer"
-"Compiling scuwdt"
-"Compiling ttcps"
-"Compiling uartps"
-"Compiling usbps"
-"Compiling cpu_cortexa9"
+Compiling common
+c:\Xilinx\14.4\ISE_DS\EDK\gnu\arm\nt\bin\arm-xilinx-eabi-ar.exe: creating ../../../lib/libxil.a
+Compiling xadc
+Compiling standalone
+Compiling gpio
+Compiling devcfg
+Compiling dmaps
+Compiling emacps
+Compiling gpiops
+Compiling qspips
+Compiling scugic
+Compiling scutimer
+Compiling scuwdt
+Compiling ttcps
+Compiling uartps
+Compiling usbps
+Compiling cpu_cortexa9
 Running execs_generate.
-'Finished building libraries'
+Finished building libraries

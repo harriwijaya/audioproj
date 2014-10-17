@@ -1,0 +1,51 @@
+/*
+ * Copyright (c) 2009 Xilinx, Inc.  All rights reserved.
+ *
+ * Xilinx, Inc.
+ * XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS" AS A
+ * COURTESY TO YOU.  BY PROVIDING THIS DESIGN, CODE, OR INFORMATION AS
+ * ONE POSSIBLE   IMPLEMENTATION OF THIS FEATURE, APPLICATION OR
+ * STANDARD, XILINX IS MAKING NO REPRESENTATION THAT THIS IMPLEMENTATION
+ * IS FREE FROM ANY CLAIMS OF INFRINGEMENT, AND YOU ARE RESPONSIBLE
+ * FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE FOR YOUR IMPLEMENTATION.
+ * XILINX EXPRESSLY DISCLAIMS ANY WARRANTY WHATSOEVER WITH RESPECT TO
+ * THE ADEQUACY OF THE IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO
+ * ANY WARRANTIES OR REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE
+ * FROM CLAIMS OF INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY
+ * AND FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ */
+
+/*
+ * helloworld.c: simple test application
+ */
+
+#include <stdio.h>
+#include "platform.h"
+#include "xparameters.h"
+#include "xil_io.h"
+
+//void print(char *str);
+
+int main()
+{
+    //init_platform();
+	u32 i;
+	u32 ret[10];
+
+    xil_printf("Hello World\n\r");
+
+    i=0xA;//10;//for(i=0;i<11;i++)
+    {
+    	Xil_Out32(XPAR_MY_PERIPHERAL_0_S_AXI_MEM0_BASEADDR+i*4, i);
+    	xil_printf("Sent data %0x\n\r", i);
+    }
+
+    i=0xA;//10;//for(i=0;i<11;i++)
+    {
+    	ret[i] = Xil_In32(XPAR_MY_PERIPHERAL_0_S_AXI_MEM0_BASEADDR+i*4);
+    	xil_printf("Received data %0x in %0x\n\r", ret[i], i);
+    }
+
+    return 0;
+}
